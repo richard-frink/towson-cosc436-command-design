@@ -9,7 +9,7 @@ package edu.towson.CS436.rsussan.Back_End;
  */
 
 public class Menu {
-	private static Menu_Item[] items = new Menu_Item[100];
+	private Menu_Item[] items = new Menu_Item[100];
 	
 	public Menu(){
 		items[0] = new Menu_Item("BBQ Wings (5)", 1, false, 3.99);
@@ -18,21 +18,20 @@ public class Menu {
 		items[3] = new Menu_Item("Crabby Fries", 1, false, 6.99);
 		items[4] = new Menu_Item("Crab Pretzel", 1, false, 7.99);
 		items[5] = new Menu_Item("Shrimp Salad Wrap", 2, true, 11.99);
-		items[6] = new Menu_Item("Maryland Crab Cake", 1, false, 15.99);
-		items[7] = new Menu_Item("", 1, false, 4.99);
-		items[8] = new Menu_Item("", 1, false, 4.99);
-		items[9] = new Menu_Item("", 1, false, 4.99);
-		items[10] = new Menu_Item("", 1, false, 4.99);
-		items[11] = new Menu_Item("", 1, false, 4.99);
-		items[12] = new Menu_Item("", 1, false, 4.99);
-		items[13] = new Menu_Item("", 1, false, 4.99);
-		items[14] = new Menu_Item("", 1, false, 4.99);
-		items[15] = new Menu_Item("", 1, false, 4.99);
-		items[16] = new Menu_Item("", 1, false, 4.99);
-		items[17] = new Menu_Item("", 1, false, 4.99);
-		items[18] = new Menu_Item("", 1, false, 4.99);
-		items[19] = new Menu_Item("", 1, false, 4.99);
-		items[20] = new Menu_Item("", 1, false, 4.99);
+		items[6] = new Menu_Item("Maryland Crab Cake", 2, false, 15.99);
+		items[7] = new Menu_Item("Garden Burger", 2, true, 9.99);
+		items[8] = new Menu_Item("Bacon Cheeseburger", 2, false, 10.99);
+		items[9] = new Menu_Item("", 2, false, 4.99);
+		items[10] = new Menu_Item("", 2, false, 4.99);
+		items[11] = new Menu_Item("", 2, false, 4.99);
+		items[12] = new Menu_Item("", 2, false, 4.99);
+		items[13] = new Menu_Item("Oreo Sundae", 3, false, 6.99);
+		items[14] = new Menu_Item("Fresh Strawberries", 3, true, 3.99);
+		items[15] = new Menu_Item("Churros", 3, false, 4.99);
+		items[16] = new Menu_Item("Frech Fries", 4, false, 3.49);
+		items[17] = new Menu_Item("Steamed Broccoli", 4, true, 2.99);
+		items[19] = new Menu_Item("Green Beans", 4, true, 2.99);
+		items[20] = new Menu_Item("Mashed Potatoes", 4, false, 3.49);
 	}
 	
 	

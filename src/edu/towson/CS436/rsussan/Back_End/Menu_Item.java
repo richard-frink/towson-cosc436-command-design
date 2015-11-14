@@ -12,7 +12,7 @@ public class Menu_Item {
 	private int type;
 	//type is 1 - appetizer. 2 - entree, 3 - side, 4 - dessert
 	private boolean HH;
-	//HH = heart healthy (is or is not)
+	//HH => heart healthy (is or is not)
 	private double price;
 	
 	public Menu_Item(String name, int type, boolean heartHealthy, double price){

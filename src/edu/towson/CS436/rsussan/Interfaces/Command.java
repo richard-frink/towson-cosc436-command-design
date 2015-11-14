@@ -1,4 +1,4 @@
-package edu.towson.CS436.rsussan.Back_End;
+package edu.towson.CS436.rsussan.Interfaces;
 
 /**
  * Interface for command design pattern.
