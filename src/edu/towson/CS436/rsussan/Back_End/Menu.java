@@ -26,7 +26,7 @@ public class Menu {
 		items[7] = new Menu_Item("Garden Burger", 2, true, 9.99);
 		items[8] = new Menu_Item("Bacon Cheeseburger", 2, false, 10.99);
 		items[9] = new Menu_Item("Greek Salad", 2, false, 9.99);
-		items[10] = new Menu_Item("Large Nachos Supreme ", 2, false, 10.99);
+		items[10] = new Menu_Item("Large Nachos Supreme", 2, false, 10.99);
 		items[11] = new Menu_Item("Grilled Chicken Club", 2, true, 10.99);
 		items[12] = new Menu_Item("Cheese Tortelinni w/ Pork", 2, false, 4.99);
 		items[13] = new Menu_Item("Oreo Sundae", 3, false, 6.99);
@@ -34,14 +34,15 @@ public class Menu {
 		items[15] = new Menu_Item("Churros", 3, false, 4.99);
 		items[16] = new Menu_Item("Frech Fries", 4, false, 3.49);
 		items[17] = new Menu_Item("Steamed Broccoli", 4, true, 2.99);
-		items[19] = new Menu_Item("Green Beans", 4, true, 2.99);
-		items[20] = new Menu_Item("Mashed Potatoes", 4, false, 3.49);
+		items[18] = new Menu_Item("Green Beans", 4, true, 2.99);
+		items[19] = new Menu_Item("Mashed Potatoes", 4, false, 3.49);
 	}
 	
 	public void addItem(Menu_Item i){
 		int x = 0;
-		while(items[x] != null){
-			x++;
+		while(x < 50){
+			if(items[x] != null) x++;
+			else break;
 		}
 		items[x] = i;
 	}

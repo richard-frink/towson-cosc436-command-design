@@ -14,23 +14,35 @@ package edu.towson.CS436.rsussan.Back_End;
 import edu.towson.CS436.rsussan.Interfaces.MenuIterator;
 
 public class System_Interface {
-	private static Invoker invoker;
+	private static Invoker invoker = new Invoker(new Aggregator());
 	
-	public static String[] getMenu(){
+	public String[] getMenu(){
 		Menu menu = invoker.getMenu();
-		
 		MenuIterator itr = menu.getMenuIterator();
 		
 		String[] str = new String[100];
+		int x = 0;
+		do {
+			if(x != 0) itr.next();
+			Menu_Item i = itr.getItem();
+			str[x] = String.format("%-31s $%.2f", i.getName(), i.getPrice());
+			x++;
+		} while(itr.hasNext());
+		return str;
+	}
+	
+	public String[] getHHMenu(){
+		Menu menu = invoker.getHHMenu();
+		MenuIterator itr = menu.getMenuIterator();
 		
-		
-		
-		
-		
-		
-		while(true){
-			break;
-		}
+		String[] str = new String[100];
+		int x = 0;
+		do {
+			if(x != 0) itr.next();
+			Menu_Item i = itr.getItem();
+			str[x] = String.format("%-31s $%.2f", i.getName(), i.getPrice());
+			x++;
+		} while(itr.hasNext());
 		return str;
 	}
 }

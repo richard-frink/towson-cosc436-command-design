@@ -14,7 +14,7 @@ public class AllItemsIterator implements MenuIterator{
     
     @Override
     public boolean hasNext(){
-        if((Menu.items).length - 1 == current){
+        if((Menu.items).length == current){
             return false;
         }
         else{

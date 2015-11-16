@@ -8,7 +8,7 @@ package edu.towson.CS436.rsussan.Front_End;
  *
  */
 
-import java.util.*;
+//import java.util.*;
 import edu.towson.CS436.rsussan.Back_End.System_Interface;
 
 public class User_Interface {
@@ -30,19 +30,24 @@ public class User_Interface {
 		
 		
 		
+		String[] str = sys.getMenu();
+		
+		displayOutput(str);
+		System.out.println();
+		
+		str = sys.getHHMenu();
+		
+		displayOutput(str);
+		System.out.println();
 		
 		
-		
-		
-		
-		
-		Scanner scan = new Scanner(System.in);
-		
-		String thingy = scan.next();
-		
-		System.out.print(thingy);
-		
-		scan.close();
 	}
-
+	
+	public static void displayOutput(String[] str){
+		int x = 0;
+		while(str[x] != null){
+			System.out.println(str[x]);
+			x++;
+		}
+	}
 }
