@@ -15,18 +15,20 @@ public class PriceIterator implements MenuIterator {
 	
 	public PriceIterator(double p){
 		this.price = p;
+		if(((Menu.items)[current]).getPrice() <= p){
+    		this.next();
+    	}
 	}
 	
 	@Override
 	public boolean hasNext() {
 		int temp = current;
-		while((Menu.items[current] != null)){
-			if(((Menu.items)[current]).getPrice() <= price){
+		while((Menu.items[temp] != null)){
+			temp++;
+			if(((Menu.items)[temp]).getPrice() <= price){
 				return true;
 			}
-			current++;
 		}
-		current = temp;
 		return false;
 	}
 
@@ -38,10 +40,15 @@ public class PriceIterator implements MenuIterator {
 	@Override
 	public void next() {
 		if(this.hasNext()){
-			current++;
+			while((Menu.items[current] != null)){
+				current++;
+				if(((Menu.items)[current]).getPrice() <= price){
+					break;
+				}
+			}
 		}
         else{
-            System.out.println("ERROR: There are no more available items");
+            System.out.println("ERROR: There are no more available items under $" + price);
         }
 	}
 }

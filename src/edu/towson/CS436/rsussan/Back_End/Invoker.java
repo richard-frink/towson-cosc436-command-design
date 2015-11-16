@@ -19,6 +19,18 @@ public class Invoker {
 		return (Menu)(new CMDGetMenu(agg)).execute();
 	}
 	
+	public Menu getHHMenu(){
+		return (Menu)(new CMDGetHHMenu(agg)).execute();
+	}
+	
+	public Menu getPriceMenu(double price){
+		return (Menu)(new CMDGetPriceMenu(agg, price)).execute();
+	}
+	
+	public Menu getTypeMenu(int type){
+		return (Menu)(new CMDGetTypeMenu(agg, type)).execute();
+	}
+	
 	public Orders getOrders(){
 		return (Orders)(new CMDGetOrders(agg)).execute();
 	}

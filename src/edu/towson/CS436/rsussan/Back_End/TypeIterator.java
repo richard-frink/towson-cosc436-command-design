@@ -15,18 +15,20 @@ public class TypeIterator implements MenuIterator {
 	
 	public TypeIterator(int t){
 		this.type = t;
+		if(((Menu.items)[current]).getType() != t){
+    		this.next();
+    	}
 	}
 	
 	@Override
 	public boolean hasNext() {
 		int temp = current;
-		while((Menu.items[current] != null)){
-			if(((Menu.items)[current]).getType() == type){
+		while((Menu.items[temp] != null)){
+			temp++;
+			if(((Menu.items)[temp]).getType() == type){
 				return true;
 			}
-			current++;
 		}
-		current = temp;
 		return false;
 	}
 
@@ -38,7 +40,12 @@ public class TypeIterator implements MenuIterator {
 	@Override
 	public void next() {
 		if(this.hasNext()){
-			current++;
+			while((Menu.items[current] != null)){
+				current++;
+				if(((Menu.items)[current]).getType() == type){
+					break;
+				}
+			}
 		}
         else{
             System.out.println("ERROR: There are no more available items");

@@ -18,8 +18,15 @@ public class System_Interface {
 	
 	public static String[] getMenu(){
 		Menu menu = invoker.getMenu();
-		MenuIterator itr = menu.getMenuItr();
+		
+		MenuIterator itr = menu.getMenuIterator();
+		
 		String[] str = new String[100];
+		
+		
+		
+		
+		
 		
 		while(true){
 			break;

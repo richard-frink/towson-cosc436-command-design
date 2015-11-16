@@ -13,7 +13,9 @@ import edu.towson.CS436.rsussan.Interfaces.MenuIterator;
 public class Menu {
 	public static Menu_Item[] items = new Menu_Item[100];
 	
-	public Menu(){
+	public Menu(){} // if it is not called with an integer in the parameters than the menu will be empty
+	
+	public Menu(int premade){
 		items[0] = new Menu_Item("BBQ Wings (5)", 1, false, 3.99);
 		items[1] = new Menu_Item("Spinach Dip", 1, true, 5.99);
 		items[2] = new Menu_Item("Loaded Potato Skins", 1, false, 4.99);
@@ -36,7 +38,27 @@ public class Menu {
 		items[20] = new Menu_Item("Mashed Potatoes", 4, false, 3.49);
 	}
 	
-	public MenuIterator getMenuItr(){
+	public void addItem(Menu_Item i){
+		int x = 0;
+		while(items[x] != null){
+			x++;
+		}
+		items[x] = i;
+	}
+	
+	public MenuIterator getMenuIterator(){
 		return new AllItemsIterator();
+	}
+	
+	public MenuIterator getHHIterator(){
+		return new HHIterator();
+	}
+	
+	public MenuIterator getPriceIterator(double p){
+		return new PriceIterator(p);
+	}
+	
+	public MenuIterator getTypeIterator(int t){
+		return new TypeIterator(t);
 	}
 }
