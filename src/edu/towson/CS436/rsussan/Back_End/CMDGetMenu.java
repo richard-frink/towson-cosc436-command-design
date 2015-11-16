@@ -21,5 +21,4 @@ public class CMDGetMenu implements Command {
 	public Object execute() {
 		return agg.getMenu();
 	}
-
 }

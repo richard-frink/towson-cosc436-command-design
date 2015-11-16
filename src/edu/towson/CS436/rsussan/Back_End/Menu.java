@@ -8,8 +8,10 @@ package edu.towson.CS436.rsussan.Back_End;
  *
  */
 
+import edu.towson.CS436.rsussan.Interfaces.MenuIterator;
+
 public class Menu {
-	private Menu_Item[] items = new Menu_Item[100];
+	public static Menu_Item[] items = new Menu_Item[100];
 	
 	public Menu(){
 		items[0] = new Menu_Item("BBQ Wings (5)", 1, false, 3.99);
@@ -21,10 +23,10 @@ public class Menu {
 		items[6] = new Menu_Item("Maryland Crab Cake", 2, false, 15.99);
 		items[7] = new Menu_Item("Garden Burger", 2, true, 9.99);
 		items[8] = new Menu_Item("Bacon Cheeseburger", 2, false, 10.99);
-		items[9] = new Menu_Item("", 2, false, 4.99);
-		items[10] = new Menu_Item("", 2, false, 4.99);
-		items[11] = new Menu_Item("", 2, false, 4.99);
-		items[12] = new Menu_Item("", 2, false, 4.99);
+		items[9] = new Menu_Item("Greek Salad", 2, false, 9.99);
+		items[10] = new Menu_Item("Large Nachos Supreme ", 2, false, 10.99);
+		items[11] = new Menu_Item("Grilled Chicken Club", 2, true, 10.99);
+		items[12] = new Menu_Item("Cheese Tortelinni w/ Pork", 2, false, 4.99);
 		items[13] = new Menu_Item("Oreo Sundae", 3, false, 6.99);
 		items[14] = new Menu_Item("Fresh Strawberries", 3, true, 3.99);
 		items[15] = new Menu_Item("Churros", 3, false, 4.99);
@@ -34,5 +36,7 @@ public class Menu {
 		items[20] = new Menu_Item("Mashed Potatoes", 4, false, 3.49);
 	}
 	
-	
+	public MenuIterator getMenuItr(){
+		return new AllItemsIterator();
+	}
 }

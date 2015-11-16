@@ -11,9 +11,19 @@ package edu.towson.CS436.rsussan.Back_End;
  *
  */
 
+import edu.towson.CS436.rsussan.Interfaces.MenuIterator;
+
 public class System_Interface {
+	private static Invoker invoker;
 	
-	public String[] getMenu(){
-		return new String[1];
+	public static String[] getMenu(){
+		Menu menu = invoker.getMenu();
+		MenuIterator itr = menu.getMenuItr();
+		String[] str = new String[100];
+		
+		while(true){
+			break;
+		}
+		return str;
 	}
 }
