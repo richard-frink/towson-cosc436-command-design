@@ -8,14 +8,12 @@ package edu.towson.CS436.rsussan.Front_End;
  *
  */
 
-//import java.util.*;
+import java.util.*;
 import edu.towson.CS436.rsussan.Back_End.System_Interface;
 
 public class User_Interface {
 	public static void main(String[] args) {
 		System_Interface sys = new System_Interface();
-		
-		
 		
 		/**
 		 * 1.display menu
@@ -27,20 +25,22 @@ public class User_Interface {
 		 * 3.add to current orders
 		 */
 		
-		
-		
-		
 		String[] str = sys.getMenu();
-		
 		displayOutput(str);
 		System.out.println();
+		
 		
 		str = sys.getHHMenu();
-		
 		displayOutput(str);
 		System.out.println();
 		
 		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a max price to get a list of those items: ");
+		double temp = scan.nextDouble();
+		str = sys.getPriceMenu(temp);
+		displayOutput(str);
+		scan.close();
 	}
 	
 	public static void displayOutput(String[] str){

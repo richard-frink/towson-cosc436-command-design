@@ -8,7 +8,7 @@ package edu.towson.CS436.rsussan.Back_End;
  */
 
 public class Aggregator {
-	private Menu menu = new Menu(0);
+	private Menu menu = new Menu();
 	private Orders orders;
 	
 	public Menu getMenu(){

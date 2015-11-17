@@ -21,7 +21,7 @@ public class HHIterator implements MenuIterator {
 	@Override
 	public boolean hasNext() {
 		int temp = current;
-		while((Menu.items[temp] != null)){
+		while((Menu.items[temp + 1] != null)){
 			temp++;
 			if(((Menu.items)[temp]).isHH() == true){
 				return true;
@@ -38,7 +38,7 @@ public class HHIterator implements MenuIterator {
 	@Override
 	public void next() {
 		if(this.hasNext()){
-			while((Menu.items[current] != null)){
+			while((Menu.items[current + 1] != null)){
 				current++;
 				if(((Menu.items)[current]).isHH() == true){
 					break;

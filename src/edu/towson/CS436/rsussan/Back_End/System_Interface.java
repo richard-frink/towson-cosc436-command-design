@@ -32,8 +32,23 @@ public class System_Interface {
 	}
 	
 	public String[] getHHMenu(){
-		Menu menu = invoker.getHHMenu();
-		MenuIterator itr = menu.getMenuIterator();
+		Menu menu = invoker.getMenu();
+		MenuIterator itr = menu.getHHIterator();
+		
+		String[] str = new String[100];
+		int x = 0;
+		do {
+			if(x != 0) itr.next();
+			Menu_Item i = itr.getItem();
+			str[x] = String.format("%-31s $%.2f", i.getName(), i.getPrice());
+			x++;
+		} while(itr.hasNext());
+		return str;
+	}
+	
+	public String[] getPriceMenu(double price){
+		Menu menu = invoker.getMenu();
+		MenuIterator itr = menu.getPriceIterator(price);
 		
 		String[] str = new String[100];
 		int x = 0;
