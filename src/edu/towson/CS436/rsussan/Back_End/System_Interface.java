@@ -16,7 +16,7 @@ import edu.towson.CS436.rsussan.Interfaces.MenuIterator;
 public class System_Interface {
 	private static Invoker invoker = new Invoker(new Aggregator());
 	
-	public String[] getMenu(){
+	public static String[] getMenu(){
 		Menu menu = invoker.getMenu();
 		MenuIterator itr = menu.getMenuIterator();
 		
@@ -31,7 +31,13 @@ public class System_Interface {
 		return str;
 	}
 	
-	public String[] getHHMenu(){
+	
+	
+	/**
+	 * 
+	 * THIS IS TO BE IMPLMENTED AFTER INITAL CODE DEADLINE
+	 * 
+	public static String[] getHHMenu(){
 		Menu menu = invoker.getMenu();
 		MenuIterator itr = menu.getHHIterator();
 		
@@ -46,7 +52,7 @@ public class System_Interface {
 		return str;
 	}
 	
-	public String[] getPriceMenu(double price){
+	public static String[] getPriceMenu(double price){
 		Menu menu = invoker.getMenu();
 		MenuIterator itr = menu.getPriceIterator(price);
 		
@@ -60,4 +66,6 @@ public class System_Interface {
 		} while(itr.hasNext());
 		return str;
 	}
+	
+	*/
 }
