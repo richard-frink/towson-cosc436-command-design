@@ -8,8 +8,10 @@ package edu.towson.CS436.rsussan.Back_End;
  *
  */
 
+import edu.towson.CS436.rsussan.Interfaces.OrderIterator;
+
 public class Orders {
-	private Menu_Item[] items;
+	public static Menu_Item[] items;
 	
 	public Orders(){
 		items  = new Menu_Item[100];
@@ -17,8 +19,9 @@ public class Orders {
 	
 	public void addItem(Menu_Item i){
 		int x = 0;
-		while(items[x] != null){
-			x++;
+		while(x < 99){
+			if(items[x] != null) x++;
+			else break;
 		}
 		items[x] = i;
 	}
@@ -31,5 +34,9 @@ public class Orders {
 			x++;
 		}
 		return temp;
+	}
+	
+	public OrderIterator getOrdersIterator(){
+		return new AllOrderIterator();
 	}
 }

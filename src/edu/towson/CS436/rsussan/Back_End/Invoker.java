@@ -31,6 +31,10 @@ public class Invoker {
 		return (Menu)(new CMDGetTypeMenu(agg, type)).execute();
 	}
 	
+	public void submitOrders(int[] arr){
+		(new CMDSubmitOrder(agg, arr)).execute();
+	}
+	
 	public Orders getOrders(){
 		return (Orders)(new CMDGetOrders(agg)).execute();
 	}

@@ -9,10 +9,14 @@ package edu.towson.CS436.rsussan.Back_End;
 
 public class Aggregator {
 	private Menu menu = new Menu();
-	private Orders orders;
+	private Orders orders = new Orders();
 	
 	public Menu getMenu(){
 		return menu;
+	}
+	
+	public void submitOrder(Menu_Item i){
+		orders.addItem(i);
 	}
 	
 	public Orders getOrders(){

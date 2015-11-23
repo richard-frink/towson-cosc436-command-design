@@ -38,11 +38,15 @@ public class Menu {
 	
 	public void addItem(Menu_Item i){
 		int x = 0;
-		while(x < 100){
+		while(x < 99){
 			if(items[x] != null) x++;
 			else break;
 		}
 		items[x] = i;
+	}
+	
+	public Menu_Item getItem(int i){
+		return items[i];
 	}
 	
 	public MenuIterator getMenuIterator(){
